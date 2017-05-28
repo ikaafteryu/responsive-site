@@ -92,6 +92,10 @@ header {
 				width: 100%;
 				height: 250px;
 			}
+			.title-box{
+				width: 100%;
+				height: 250px;
+			}
 		}
 	}
 }
@@ -113,45 +117,47 @@ section {
 }
 // Article
 #article {
-	margin-top: 20px;
+margin-top: 50px;
 	.container {
-		@include display-flex;
-		@include flex-direction(column);
-		justify-content: space-between;
-		padding: 20px;
-		.article-box {
-			padding: 30px;
-			margin: 20px;
-			@include box-shadow(0 2px 4px 1px rgba(#000, .3), 5px 5px 10px 3px rgba($keyColor, 0.1) inset);
-			h3 {
-				@extend .abel;
-				@extend .uppercase;
-				font-size: 2.0rem;
-				margin-bottom: 10px;
-			}
-			small {
-				@extend .abel;
-				font-size: 1.5rem;
-				color: #keyColor;
-				display: block;
-				width: 92px;
-				margin-left: auto;
-			}
-		}
+	@include display-flex;
+	justify-content: space-between;
+	@include flex-direction(column); 
 	}
-	//768pxより小さい場合に適応
-	@media (max-width: 768px) {
-		#skills {
-			.container {
-				@include flex-direction(row);
-				justify-content: space-between;
-				.article-box {
-					margin: 0 10px; // 左右にマージン
-				}
-			}
-		}
+	h2 {
+	margin-bottom: 60px;
+	color: $fontColor;
+	}
+	.article-box {
+	@include box-sizing(border-box);
+	@include flex(1);
+	margin: 20px 0;
+	padding: 30px;
+	}
+	h3{
+			font-size: 2.0rem;
+			margin-bottom:20px;
+	}
+	small {
+	@extend .abel;
+    width:85px;
+    display :block;
+    margin-left:auto;
+	margin-bottom: 10px;
 	}
 }
+
+@media (min-width: 769px) {
+	 #article {
+    .container {
+      @include flex-direction(row);     // スキルボックスを横に並べる
+      justify-content: space-between;
+    }
+    .article-box {
+      margin: 0 10px;                   // 左右にマージン
+    }
+  }
+}
+
 // Subscribe
 #subscribe {
 	background-color: $keyColor;
