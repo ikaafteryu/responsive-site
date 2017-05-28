@@ -1,17 +1,17 @@
 @import "compass";
 @import url('https://fonts.googleapis.com/css?family=Cardo');
 /* Google Fonts用のCSSを読み込み */
+
 // font-family
-$baseFontFamily :'Source Sans Pro', sans-serif, 'Khula', sans-serif;
+$baseFontFamily:'Source Sans Pro', sans-serif, 'Khula', sans-serif;
 // colors
 $baseColor: #FFFFF3;
 $fontColor: #1F2124;
 $keyColor: #f9d423;
-
-
 //Base
-html {font-size: 70%;}
-
+html {
+	font-size: 70%;
+}
 body {
 	color: $fontColor;
 	font-family: $baseFontFamily;
@@ -21,173 +21,171 @@ body {
 	background-color: $baseColor;
 }
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 /* Align
 ------------------------------------------------------------*/
- .abel{
- 	 font-family:'Cardo', serif;
- }
+
+.abel {
+	font-family: 'Cardo', serif;
+}
 .text-center {
-  text-align: center;
+	text-align: center;
 }
 /* Layout
 ------------------------------------------------------------*/
-.block-center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
 
+.block-center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
 /* Font
 ------------------------------------------------------------*/
-.uppercase {
-  text-transform: uppercase;
-}
 
+.uppercase {
+	text-transform: uppercase;
+}
 /* Header
 ------------------------------------------------------------*/
-	header{
-		.title{
+
+header {
+	.title {
 		width: 100%;
-		height:500px;
+		height: 500px;
 		margin: 0 auto;
 		text-align: center;
-		.title-box{
+		.title-box {
 			position: absolute;
 			top: 0;
 			left: 0;
 			height: 100%;
-			 width: 100%;
+			width: 100%;
 			color: #fff;
 			background-color: rgba(0, 0, 0, 0);
-			 .button {
+			.button {
 				width: 20px;
 				height: 20px;
 				padding: 10px;
-				color:$fontColor;
-				text-align:center;
+				color: $fontColor;
+				text-align: center;
 				font-size: 25px;
 				line-height: 0;
 				display: block;
 				float: right;
 				margin: 20px 20px 0px 0px;
-		&:visited{
-		color: $fontColor;
-	} &:hover{
-		color: $keyColor;
-		}
-		}
-		}	
-		}
-		//768pxより小さい場合に適応
-		@media (max-width: 768px) {
-			.title{
-		width: 100%;
-		height:250px;
-			img{
-				width: 100%;
-		height:250px;
+				&:visited {
+					color: $fontColor;
+				}
+				&:hover {
+					color: $keyColor;
+				}
 			}
 		}
 	}
+	//768pxより小さい場合に適応
+	@media (max-width: 768px) {
+		.title {
+			width: 100%;
+			height: 250px;
+			img {
+				width: 100%;
+				height: 250px;
+			}
+		}
 	}
-
+}
 /* Contents
 ------------------------------------------------------------*/
+
 // Common Styles
 section {
-  padding: 60px 0;
-  .container {
-    width: 90%;
-    @extend .block-center;
-  }
-  h2 {
-    @extend .abel;
-    font-size: 3.2rem;
-    @extend .uppercase;
-  }
+	padding: 60px 0;
+	.container {
+		width: 90%;
+		@extend .block-center;
+	}
+	h2 {
+		@extend .abel;
+		font-size: 3.2rem;
+		@extend .uppercase;
+	}
 }
-
 // Article
-#article{
+#article {
 	margin-top: 20px;
 	.container {
-	@include display-flex;
-	@include flex-direction(column); 
-	justify-content: space-between;
-  padding:20px;
-		.article-box{
-			 padding:30px;
-			 margin:20px;
-			  @include box-shadow(0 2px 4px 1px rgba(#000, .3), 5px 5px 10px 3px rgba($keyColor ,0.1) inset);
+		@include display-flex;
+		@include flex-direction(column);
+		justify-content: space-between;
+		padding: 20px;
+		.article-box {
+			padding: 30px;
+			margin: 20px;
+			@include box-shadow(0 2px 4px 1px rgba(#000, .3), 5px 5px 10px 3px rgba($keyColor, 0.1) inset);
 			h3 {
-			@extend .abel;
-		    @extend .uppercase;
-		    font-size: 2.0rem;
-			margin-bottom: 10px;
+				@extend .abel;
+				@extend .uppercase;
+				font-size: 2.0rem;
+				margin-bottom: 10px;
 			}
 			small {
 				@extend .abel;
 				font-size: 1.5rem;
 				color: #keyColor;
 				display: block;
-			 width:92px;
+				width: 92px;
 				margin-left: auto;
+			}
 		}
+	}
+	//768pxより小さい場合に適応
+	@media (max-width: 768px) {
+		#skills {
+			.container {
+				@include flex-direction(row);
+				justify-content: space-between;
+				.article-box {
+					margin: 0 10px; // 左右にマージン
+				}
+			}
 		}
+	}
 }
-
-//768pxより小さい場合に適応
-@media (max-width: 768px) {  
-	 #skills {
-    .container {
-      @include flex-direction(row);     
-      justify-content: space-between;
-	    .article-box {
-	      margin: 0 10px;                   // 左右にマージン
-    }
-    }
-  }
-}
-}
-
 // Subscribe
 #subscribe {
-	background-color:$keyColor;
+	background-color: $keyColor;
 	.subscribe-box {
-	 padding:20px;
+		padding: 20px;
 		h3 {
 			@extend .abel;
-		  font-size: 1.8rem;
-		font-weight: bold;
-		color: $fontColor;
-		margin: 0 0 15px;
+			font-size: 1.8rem;
+			font-weight: bold;
+			color: $fontColor;
+			margin: 0 0 15px;
 		}
 		.button-subscribe {
-		font-size: 1rem;
-		font-weight: bold;
-		display: block;
-		width: 180px;
-		margin: auto;
-		padding: 5px 0;
-		text-align: center;
-		@extend .abel;
-     @extend .uppercase;
-		@include border-radius(4px);
-		color: $keyColor;
-		background-color: $baseColor;
-        	&:visited{
-		color: $keyColor;
-	} &:hover{
-		color: $fontColor;
+			font-size: 1rem;
+			font-weight: bold;
+			display: block;
+			width: 180px;
+			margin: auto;
+			padding: 5px 0;
+			text-align: center;
+			@extend .abel;
+			@extend .uppercase;
+			@include border-radius(4px);
+			color: $keyColor;
+			background-color: $baseColor;
+			&:visited {
+				color: $keyColor;
+			}
+			&:hover {
+				color: $fontColor;
+			}
 		}
-		}
-	   
 	}
-	}
-
-
+}
 //footer
 footer {
 	font-weight: 300;
