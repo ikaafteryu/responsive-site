@@ -1,7 +1,6 @@
 @import "compass";
 @import url('https://fonts.googleapis.com/css?family=Cardo');
 /* Google Fonts用のCSSを読み込み */
-
 // font-family
 $baseFontFamily:'Source Sans Pro', sans-serif, 'Khula', sans-serif;
 // colors
@@ -48,7 +47,6 @@ a {
 }
 /* Header
 ------------------------------------------------------------*/
-
 header {
 	.title {
 		width: 100%;
@@ -56,6 +54,7 @@ header {
 		margin: 0 auto;
 		text-align: center;
 		background-image: url(../images/title.jpg);
+		background-size: cover;
 		.button {
 			width: 20px;
 			height: 20px;
@@ -89,7 +88,6 @@ header {
 }
 /* Contents
 ------------------------------------------------------------*/
-
 // Common Styles
 	h2 {
 		@extend .abel;

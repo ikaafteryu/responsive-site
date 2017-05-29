@@ -42,7 +42,8 @@ header .title {
   height: 500px;
   margin: 0 auto;
   text-align: center;
-  background-image: url(../images/title.jpg); }
+  background-image: url(../images/title.jpg);
+  background-size: cover; }
   header .title .button {
     width: 20px;
     height: 20px;
